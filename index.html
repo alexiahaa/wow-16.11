@@ -262,6 +262,62 @@
         color: var(--ink);
       }
 
+      .substances {
+        padding-block: 4.5rem 1rem;
+      }
+
+      .substance-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+
+      .substance-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      .substance-art {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1.5;
+        background: #e8eee8;
+      }
+
+      .substance-card:nth-child(2) .substance-art {
+        background: #e7ece1;
+      }
+
+      .substance-card:nth-child(3) .substance-art {
+        background: #eae8e0;
+      }
+
+      .substance-card:nth-child(4) .substance-art {
+        background: #e8ecec;
+      }
+
+      .substance-caption {
+        padding: 1rem 1.1rem 1.15rem;
+      }
+
+      .substance-caption h3 {
+        margin-bottom: 0.3rem;
+        font-size: 0.98rem;
+      }
+
+      .substance-caption p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .substance-note {
+        margin-top: 1rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
       .section {
         padding-block: 5.5rem;
       }
@@ -566,6 +622,10 @@
           grid-template-columns: repeat(2, 1fr);
         }
 
+        .substance-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
         .sign-card {
           min-height: 220px;
           padding: 1.2rem;
@@ -602,6 +662,7 @@
         }
 
         .sign-grid,
+        .substance-grid,
         .action-grid,
         .emergency-grid,
         .avoid-list {
@@ -647,6 +708,7 @@
         <nav aria-label="Main navigation">
           <ul>
             <li><a href="#signs">Possible signs</a></li>
+            <li><a href="#forms">Substance forms</a></li>
             <li><a href="#urgent">Urgent help</a></li>
             <li><a href="#talk">How to talk</a></li>
             <li><a href="#support">Find support</a></li>
@@ -688,6 +750,104 @@
               signs as a reason to check in—not proof or a diagnosis.
             </p>
           </div>
+        </section>
+
+        <section class="substances" id="forms" aria-labelledby="forms-title">
+          <div class="section-heading">
+            <h2 id="forms-title">Substances can take many forms</h2>
+            <p>
+              These original illustrations show broad examples—not specific or
+              identifiable drugs.
+            </p>
+          </div>
+          <div class="substance-grid">
+            <article class="substance-card">
+              <svg class="substance-art" viewBox="0 0 360 240" role="img" aria-labelledby="capsule-title">
+                <title id="capsule-title">Illustration of assorted tablets and a capsule</title>
+                <ellipse cx="180" cy="197" rx="117" ry="15" fill="#cbd7cd" />
+                <g transform="rotate(-18 130 127)">
+                  <rect x="76" y="106" width="116" height="43" rx="21.5" fill="#f8f6ec" />
+                  <path d="M134 106h36a21.5 21.5 0 0 1 0 43h-36z" fill="#d79c5e" />
+                  <path d="M134 108v39" stroke="#fffefa" stroke-width="3" />
+                </g>
+                <g transform="rotate(22 231 102)">
+                  <rect x="204" y="75" width="58" height="24" rx="12" fill="#739185" />
+                  <path d="M233 76v22" stroke="#e8eee8" stroke-width="2" />
+                </g>
+                <circle cx="102" cy="177" r="13" fill="#e1c76f" />
+                <path d="M96 177h12" stroke="#b09a4d" stroke-width="2" />
+                <circle cx="255" cy="157" r="11" fill="#cf8e82" />
+                <path d="M250 157h10" stroke="#ad6b61" stroke-width="2" />
+              </svg>
+              <div class="substance-caption">
+                <h3>Tablets &amp; capsules</h3>
+                <p>Medicines and other substances may come in many shapes and colors.</p>
+              </div>
+            </article>
+            <article class="substance-card">
+              <svg class="substance-art" viewBox="0 0 360 240" role="img" aria-labelledby="plant-title">
+                <title id="plant-title">Illustration of dried leaves and plant material</title>
+                <ellipse cx="180" cy="195" rx="108" ry="14" fill="#cad4c4" />
+                <path d="M96 164c29-25 46-45 63-89 14 35 12 70-12 103-18 17-34 16-51-14Z" fill="#718a63" />
+                <path d="M102 164c23-23 39-48 54-81m-30 47-22-9m36-16-16-12" fill="none" stroke="#d4dfc8" stroke-width="3" stroke-linecap="round" />
+                <path d="M161 179c34-20 56-46 72-91 19 36 20 73-3 109-19 20-42 14-69-18Z" fill="#8ca17a" />
+                <path d="M169 178c28-22 46-49 61-79m-34 47-22-5m39-17-12-17" fill="none" stroke="#e1e8d8" stroke-width="3" stroke-linecap="round" />
+                <path d="M218 174c18-14 32-32 44-62 12 25 12 49-4 72-14 13-27 9-40-10Z" fill="#607b58" />
+                <path d="M224 174c16-16 27-32 37-54" fill="none" stroke="#d4dfc8" stroke-width="3" stroke-linecap="round" />
+              </svg>
+              <div class="substance-caption">
+                <h3>Plant material</h3>
+                <p>Plant-based substances can vary widely in appearance and preparation.</p>
+              </div>
+            </article>
+            <article class="substance-card">
+              <svg class="substance-art" viewBox="0 0 360 240" role="img" aria-labelledby="crystal-title">
+                <title id="crystal-title">Abstract illustration of granules and crystal-like shapes</title>
+                <ellipse cx="180" cy="188" rx="114" ry="18" fill="#d2d1c8" />
+                <path d="M82 153c7-21 34-32 66-34 31-2 64 6 79 21l-10 33H95Z" fill="#b9c3bc" />
+                <ellipse cx="156" cy="151" rx="75" ry="25" fill="#e8e8df" />
+                <g fill="#fffefa" stroke="#cfd8d1" stroke-width="2">
+                  <path d="m113 136 13-25 17 26-15 12z" />
+                  <path d="m139 145 18-34 17 37-19 12z" />
+                  <path d="m169 139 13-22 16 26-17 11z" />
+                  <path d="m194 148 15-27 17 31-18 11z" />
+                </g>
+                <g fill="#c7d2ca">
+                  <circle cx="119" cy="158" r="3" />
+                  <circle cx="137" cy="165" r="2.5" />
+                  <circle cx="184" cy="162" r="3" />
+                  <circle cx="207" cy="161" r="2" />
+                  <circle cx="159" cy="171" r="2" />
+                </g>
+              </svg>
+              <div class="substance-caption">
+                <h3>Powders &amp; crystals</h3>
+                <p>Appearance alone cannot establish what an unknown material is.</p>
+              </div>
+            </article>
+            <article class="substance-card">
+              <svg class="substance-art" viewBox="0 0 360 240" role="img" aria-labelledby="liquid-title">
+                <title id="liquid-title">Illustration of a plain bottle and a small glass of liquid</title>
+                <ellipse cx="181" cy="197" rx="108" ry="14" fill="#ccd6d5" />
+                <path d="M105 88h61v18l12 15v55a9 9 0 0 1-9 9h-67a9 9 0 0 1-9-9v-55l12-15z" fill="#f7f5eb" stroke="#91a7a0" stroke-width="3" />
+                <path d="M101 145h73v31a9 9 0 0 1-9 9h-55a9 9 0 0 1-9-9z" fill="#d49b58" opacity=".8" />
+                <rect x="111" y="73" width="49" height="18" rx="3" fill="#7f9a8d" />
+                <path d="M214 120h57l-7 58a8 8 0 0 1-8 7h-27a8 8 0 0 1-8-7z" fill="#f7f5eb" stroke="#91a7a0" stroke-width="3" />
+                <path d="m215 157 53 5-2 16a8 8 0 0 1-8 7h-27a8 8 0 0 1-8-7z" fill="#d49b58" opacity=".8" />
+                <path d="M215 120h57" stroke="#91a7a0" stroke-width="3" />
+              </svg>
+              <div class="substance-caption">
+                <h3>Liquids</h3>
+                <p>Some substances are liquids; containers and contents can differ.</p>
+              </div>
+            </article>
+          </div>
+          <p class="substance-note">
+            <strong>Important:</strong> These drawings are illustrative, not identification
+            guides. Legitimate medicines can look similar to other substances; never taste
+            or handle an unknown substance. If someone may have taken something and feels
+            unwell, seek urgent medical advice.
+          </p>
         </section>
 
         <section class="section" id="signs" aria-labelledby="signs-title">
